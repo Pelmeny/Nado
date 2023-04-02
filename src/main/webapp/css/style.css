@@ -1,6 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
-    background: #f9f9f9;
+    background: #cecece;
 }
 
 * {
@@ -44,8 +44,8 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    background-color: #ff4b2b;
+    border: 1px solid #2bffd8;
+    background-color: #2BFFD8FF;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -81,6 +81,7 @@ form {
 
 input {
     background-color: #eeeeee;
+    border-radius: 10px;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
@@ -158,9 +159,9 @@ input {
 }
 
 .overlay {
-    background: #ff416c;
-    background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background: #41ffe9;
+    background: -webkit-linear-gradient(130deg, #39ff2b, #41dcff);
+    background: linear-gradient(to right, #39ff2b, #41dcff);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
