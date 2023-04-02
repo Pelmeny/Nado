@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 
                 List<User> suggestedFriends = userService.findSuggestedFriends(signedInUserId);
                 request.setAttribute("suggestedFriends", suggestedFriends);
-                getServletContext().getRequestDispatcher("/suggestedFriends.jsp").forward(request, response);
+                request.getServletContext().getRequestDispatcher("/suggestedFriends.jsp").forward(request, response);
             } else {
                 response.sendRedirect("registration");
             }

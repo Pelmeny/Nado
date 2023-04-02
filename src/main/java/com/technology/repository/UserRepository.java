@@ -13,6 +13,10 @@ public interface UserRepository {
 
   List<User> findSuggestedFriends(Long signedUserId);
 
+  List<User> findOutgoingRequestsList(Long senderId);
+
+  List<User> findIncomingRequestsList(Long recipientId);
+
   User findUserById(Long id);
 
   User findUserByName(String name);

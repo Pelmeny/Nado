@@ -38,7 +38,6 @@
                                 <tr>
                                     <th style="min-width: 50px;">ID</th>
                                     <th style="min-width: 150px;">Name</th>
-                                    <th style="min-width: 150px;">Password</th>
                                     <th style="min-width: 150px;"></th>
                                 </tr>
                             </thead>

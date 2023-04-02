@@ -19,7 +19,7 @@ public class JdbcUserRepository implements UserRepository {
   private static final String FIND_USER_BY_NAME = "SELECT * FROM users WHERE name=?";
   private static final String VALIDATE_USER = "SELECT * FROM users WHERE name=? AND password=?";
   private static final String SUGGESTED_FRIENDS = "SELECT * FROM users WHERE id!=? AND id NOT IN (SELECT second_friend_id FROM friends WHERE first_friend_id=?)";
-
+  private static final String OUTGOING_REQUESTS = "SELECT * FROM users u INNER JOIN requests r ON u.id = r.recipient_id WHERE r.sender_id=?";
   private final Connection connection;
 
   public JdbcUserRepository(Connection connection) {
@@ -85,6 +85,29 @@ public class JdbcUserRepository implements UserRepository {
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  @Override
+  public List<User> findOutgoingRequestsList(Long senderId) {
+    try(PreparedStatement statement = connection.prepareStatement(OUTGOING_REQUESTS)) {
+      statement.setLong(1, senderId);
+      ResultSet resultSet = statement.executeQuery();
+      List<User> users = new ArrayList<>();
+
+      while (resultSet.next()) {
+        users.add(buildUser(resultSet));
+      }
+
+      return users;
+
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  @Override
+  public List<User> findIncomingRequestsList(Long recipientId) {
+    return null;
   }
 
   @Override

@@ -4,10 +4,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./suggestedFriends.jsp">Suggested friends</a>
+                    <a class="nav-link" href="./suggestedFriends">Suggested friends</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Outgoing requests</a>
+                    <a class="nav-link" href="./outgoingRequests">Outgoing requests</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Incoming requests</a>

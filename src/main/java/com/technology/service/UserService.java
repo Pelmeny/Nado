@@ -40,4 +40,8 @@ public class UserService {
     return userRepository.findUserIdByName(name);
   }
 
+  public List<User> findOutgoingRequestsList(Long senderId) {
+    return userRepository.findOutgoingRequestsList(senderId);
+  }
+
 }

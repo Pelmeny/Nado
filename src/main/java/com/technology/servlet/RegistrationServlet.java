@@ -33,8 +33,9 @@ public class RegistrationServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     final String name = request.getParameter("name");
     final String password = request.getParameter("password");
-
     userService.addUser(name, password);
+    Long signedInUserId = userService.findUserIdByName(name);
+    request.getSession().setAttribute("signedInUserId", signedInUserId);
     response.sendRedirect("./suggestedFriends");
   }
 }
