@@ -1,0 +1,12 @@
+com\technology\servlet\LoginServlet.class
+com\technology\listener\DependencyInitializationContextListener.class
+com\technology\repository\JdbcFriendRequestRepository.class
+com\technology\servlet\SuggestedFriends.class
+com\technology\model\User.class
+com\technology\repository\FriendRequestRepository.class
+com\technology\repository\JdbcUserRepository.class
+com\technology\repository\UserRepository.class
+com\technology\servlet\CreateFriendRequestServlet.class
+com\technology\servlet\RegistrationServlet.class
+com\technology\service\FriendRequestService.class
+com\technology\service\UserService.class
